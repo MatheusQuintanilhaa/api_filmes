@@ -1,5 +1,5 @@
 import { Container, MovieList, Movie } from "./styles";
-import { APIKey } from "../../config/key";
+import APIKey from "../../config/key";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -9,6 +9,7 @@ export function Home() {
 
   useEffect(() => {
     const apiKey = APIKey();
+    console.log("API Key:", apiKey);
     fetch(
       `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`
     )

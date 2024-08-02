@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { APIKey } from "../../config/key";
+import APIKey from "../../config/key.js";
 import { Container } from "./styles";
 
 export function Details() {
